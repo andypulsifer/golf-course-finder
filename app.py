@@ -12,7 +12,7 @@ if not API_KEY:
     st.warning("Add your API key in Streamlit Secrets as `GOLFCOURSEAPI_KEY`, or set env var `GOLFCOURSEAPI_KEY`.")
     st.stop()
 
-BASE_URL = "https://golfcourseapi.com/api"
+BASE_URL = "https://api.golfcourseapi.com"
 
 @st.cache_data(ttl=3600)
 def search_courses(query: str):
