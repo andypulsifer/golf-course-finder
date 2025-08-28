@@ -24,9 +24,7 @@ def search_courses(query: str):
     return r.json()
 
 @st.cache_data(ttl=3600)
-def get_course_detail(course_id: str):
-    url = f"{BASE_URL}/courses/{course_id}"
-    headers = {"Authorization": f"Key {API_KEY}"}
+def requests.get(f"{BASE_URL}/courses", params={"search": query}, headers={"Authorization": f"Key {API_KEY}"})
     r = requests.get(url, headers=headers, timeout=20)
     r.raise_for_status()
     return r.json()
